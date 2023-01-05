@@ -1,2 +1,5 @@
-# playground
-A single repo for testing purpose
+# monorepo / test-monorepo-a
+
+A test repository for everything related to monorepos
+
+Update 1

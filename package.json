@@ -1,0 +1,40 @@
+{
+	"name": "@th3s4mur41/playground",
+	"version": "1.0.0",
+	"private": true,
+	"license": "LICENSE",
+	"engines": {
+		"node": ">= 16.0.0",
+		"npm": ">= 8.0.0"
+	},
+	"bugs": "https://github.com/Th3S4mur41/playground/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Th3S4mur41/playground.git"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"scripts": {
+		"build": "echo build",
+		"start": "echo start",
+		"test": "echo no tests available",
+		"lint": "npm run lint:style",
+		"lint:style": "prettier --check --ignore-unknown .",
+		"prepare": "husky install",
+		"release": "npx semantic-release"
+	},
+	"peerDependencies": {
+		"semantic-release": "^18.0.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^15.0.0",
+		"@commitlint/config-conventional": "^15.0.0",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/git": "^10.0.1",
+		"husky": "^7.0.2",
+		"prettier": "^2.5.0",
+		"pretty-quick": "^3.1.0"
+	},
+	"dependencies": {}
+}
