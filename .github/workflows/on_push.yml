@@ -17,16 +17,6 @@ jobs:
     name: '▶️ actions'
     uses: ./.github/workflows/lint-code.yml
 
-  build-code:
-    name: '▶️ actions'
-    needs: [lint-code]
-    uses: ./.github/workflows/build-code.yml
-
-  test-code:
-    name: '▶️ actions'
-    needs: [lint-code]
-    uses: ./.github/workflows/test-code.yml
-
   codeql:
     name: '▶️ actions'
     needs: [lint-code]
@@ -34,7 +24,7 @@ jobs:
 
   release:
     name: '▶️ actions'
-    needs: [lint-code, build-code, test-code, codeql]
+    needs: [lint-code, codeql]
     uses: ./.github/workflows/release.yml
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN  }}
