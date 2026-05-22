@@ -18,3 +18,12 @@ jobs:
     uses: ./.github/workflows/dependencies.yml
     secrets:
       GH_TOKEN: ${{ secrets.GH_TOKEN  }}
+
+  lint-pr:
+    name: '▶️ actions'
+    uses: ./.github/workflows/lint-pr.yml
+
+  lint-code:
+    name: '▶️ actions'
+    needs: [lint-pr]
+    uses: ./.github/workflows/lint-code.yml
